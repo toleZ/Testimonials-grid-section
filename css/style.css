@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ecf2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.container {
+  width: 90vw;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  padding: 1rem 2rem;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+article:nth-child(1) {
+  background-color: #7541c8;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+}
+
+article:nth-child(2) {
+  background-color: #48556a;
+}
+
+article:nth-child(4) {
+  background-color: #19212e;
+}
+
+article:nth-child(3), article:nth-child(5) {
+  background-color: white;
+}
+
+article:nth-child(3) h2, article:nth-child(3) .writer__testimony, article:nth-child(5) h2, article:nth-child(5) .writer__testimony {
+  color: #19212e;
+}
+
+.writer {
+  display: flex;
+  align-items: center;
+}
+
+.writer__img {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+
+.writer__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+.writer__verify {
+  font-size: 13px;
+  color: gray;
+}
+
+.writer__testimony {
+  font-size: 20px;
+  color: white;
+  margin: 10px 0;
+}
+
+.writer__note {
+  font-size: 16px;
+  color: #b3b3b3;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'daniel daniel jonathan kira' 'jeanette patrik patrik kira';
+    grid-column-gap: 20px;
+  }
+  article:nth-child(1) {
+    grid-area: daniel;
+    background-position-x: 80%;
+  }
+  article:nth-child(2) {
+    grid-area: jonathan;
+  }
+  article:nth-child(3) {
+    grid-area: jeanette;
+  }
+  article:nth-child(4) {
+    grid-area: patrik;
+  }
+  article:nth-child(5) {
+    grid-area: kira;
+  }
+}
+/*# sourceMappingURL=style.css.map */
